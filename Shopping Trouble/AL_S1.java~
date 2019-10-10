@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+public class AL_S1 {
+  public static void main( String[] args) throws Exception {
+    Scanner input = new Scanner(new File("DATA_ALS1.txt")); 
+    ArrayList<String> gifts = new ArrayList<String>();
+    
+    while(input.hasNext()) {
+      gifts.add(input.next());
+    }
+    
+    for(String s: gifts) {
+      String first = s.substring(0, 1);
+      String se = s.substring(1, 2);
+      
+      if(first.equals("a") || first.equals("e") || first.equals("i") || first.equals("o") || first.equals("u") || first.equals("y")) {
+        System.out.println(s + "yay");
+      }
+      else if(se.equals("a") || se.equals("e") || se.equals("i") || se.equals("o") || se.equals("u") || se.equals("y")) {
+        System.out.println(s.substring(1) + first + "ay");
+      }
+      else {
+        System.out.println(s.substring(2) + first + se + "ay");
+      }
+    }
+    
+  }
+}
