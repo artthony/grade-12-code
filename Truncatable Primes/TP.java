@@ -1,0 +1,57 @@
+import java.util.*;
+import java.io.*;
+
+public class TP {
+  public static void main( String[] args ) throws Exception {
+    int ten = 0, number = 20;
+    
+    while(ten < 10) {
+      String num = Integer.toString(number);
+      int counter = 0, numb = number, count = 0;
+      
+      for(int i = 0; i < num.length(); i++) {
+        if(numb == 2 || numb == 3 || numb == 5 || numb == 7) {
+          counter++;
+          //System.out.println("smallnum");
+          continue;
+        }
+        
+        if(numb == 1 || numb == 4 || numb == 6 || numb == 8 || numb == 9)
+          continue;
+        
+        for(int j = 2; j < numb - 1; j++) {
+          if(numb % j == 0)
+            continue;
+          else
+            count++;
+        }
+        //System.out.println(count); //
+        //System.out.println(numb); //
+        if(count == numb - 3) {
+          counter++;
+          //System.out.print("yes");
+        }
+        count = 0;
+        
+
+        double numbe = numb/10;
+        numb = (int)Math.floor(numbe);
+        //System.out.println(numb + "\n--------"); //
+        
+      }
+      //System.out.println(counter);
+      //System.out.println(num.length());
+      if(counter == num.length()) {
+        System.out.println(num);
+        ten++;
+      }
+      //else // error
+        //System.err.println(num);
+      
+      //counter = 0;
+      number++; //working!
+   }
+    
+    
+  }
+}
