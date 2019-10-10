@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+
+public class Review_6 {
+  public static void main( String[] args) throws Exception {
+    Scanner input = new Scanner(System.in);
+    boolean check = true;
+    
+    while(check){
+      System.out.println("Please, enter a password.");
+      String pass = input.next();
+      
+      if(pass.length() < 8){
+        System.out.println("Password too short. Please try again!");
+        pass = "";
+      }
+      else {
+        System.out.println(pass + " is a great password!");
+        check = false;
+      }
+      
+    }
+  }
+}

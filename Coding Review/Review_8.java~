@@ -1,0 +1,14 @@
+// Anthony Maocheia-Ricci, September 16th, 2019
+// Review Assignment 8
+
+// import packages
+import java.util.*;
+import java.io.*;
+
+public class Review_8 {
+  public static void main ( String[] args ) throws Exception {
+    Scanner input = new Scanner( System.in );
+    
+   
+  }
+}
