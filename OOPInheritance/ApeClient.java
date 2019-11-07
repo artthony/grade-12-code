@@ -1,0 +1,12 @@
+// basics of OOP, inheritance: November 7, 2019
+import java.util.*;
+
+public class ApeClient {
+  public static void main( String[] args ) {
+    Scanner input = new Scanner( System.in );
+    
+    Ape a = new Ape(); // making the object
+    a.eat(); // calling eat method from object
+
+  } // close main
+} // close class 
